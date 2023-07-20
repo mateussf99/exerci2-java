@@ -1,0 +1,24 @@
+package br.ufal.ic.p2.shoppingcart;
+
+
+public class Main {
+    public static void main(String[] args) {
+        Products p1 = new Products("Feijão", 10.0);
+        Products p2 = new Products("açucar", 20.0);
+
+        Customer c1 = new Customer(1, "Mateus", "Casa 1");
+        Customer c2 = new Customer(2, "Felipe", "Casa 2");
+
+        Shoppingcart s1 = new Shoppingcart(c1);
+        Shoppingcart s2 = new Shoppingcart(c2);
+
+        s1.addProduct(p1);
+        s1.addProduct(p2);
+        s2.addProduct(p1);
+
+        System.out.println("Cliente: " + s1.getCustomerName());
+        s1.printProducts();
+        System.out.println("Valor " + s1.gettotalprice());
+    }
+
+}

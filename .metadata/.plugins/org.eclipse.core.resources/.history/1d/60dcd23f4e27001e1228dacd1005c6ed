@@ -1,0 +1,41 @@
+package br.ufal.ic.p2.shoppingcart;
+
+import java.util.ArrayList;
+
+public class Shoppingcart {
+    private Customer customer;
+    private ArrayList<Products> products;
+
+    public Shoppingcart(Customer customer) {
+        this.customer = customer;
+        this.products = new ArrayList<Products>();
+        System.out.println("Shopping cart criado!");
+    }
+
+    public void addProduct(Products product) {
+        this.products.add(product);
+        System.out.println("Produto adicionado!");
+    }
+    public int getCustomerId() {
+        return this.customer.getId();
+    }
+    public String getCustomerName() {
+        return this.customer.getName();
+    }
+    public String getCustomerAddress() {
+        return this.customer.getAddress();
+    }
+    
+    public void printProducts() {
+        for (Products product : this.products) {
+            System.out.println(product.getName());
+        }
+    }
+    public double gettotalprice() {
+        double total = 0;
+        for (Products product : this.products) {
+            total += product.getPrice();
+        }
+        return total;
+    }
+}

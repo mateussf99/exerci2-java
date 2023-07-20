@@ -1,0 +1,18 @@
+package br.ufal.ic.p2.shoppingcart;
+
+public class Products {
+    private String name;
+    private double price;
+
+    public Products(String name, double price) {
+        this.name = name;
+        this.price = price;
+        System.out.println("Product criado!");
+    }
+    public String getName() {
+        return name;
+    }
+    public double getPrice() {
+        return price;
+    }
+}
