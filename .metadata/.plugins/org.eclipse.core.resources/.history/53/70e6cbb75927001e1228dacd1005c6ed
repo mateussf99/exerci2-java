@@ -7,7 +7,7 @@ public class Products {
     public Products(String name, double price) {
         this.name = name; //atribuindo o nome do produto
         this.price = price; //atribuindo o preço do produto
-        System.out.println("Produto criado!");
+        System.out.println("Product criado!");
     }
     public String getName() {
         return name; //retornando o nome do produto
